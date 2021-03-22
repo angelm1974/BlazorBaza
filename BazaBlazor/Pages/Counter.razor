@@ -1,0 +1,19 @@
+@page "/counter"
+
+@using BazaBlazor.Data
+@inject ZooService zooService
+<h1>Counter</h1>
+ 
+
+<button class="btn btn-primary" @onclick="IncrementCount">Dodaj pracownika</button>
+
+
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        zooService.Dodaj();
+    }
+}
